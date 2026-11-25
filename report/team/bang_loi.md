@@ -10,32 +10,56 @@ Người gắn nhãn 1: Trương Thu Hà · Người gắn nhãn 2: Nguyễn Ng�
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | Hệ thống | ... | ... | ... |
-| 2 | Giới hạn hệ thống | ... | ... | ... |
-| 3 | Hệ thống | ... | ... | ... |
-| 4 | Giới hạn hệ thống | ... | ... | ... |
-| 5 | Ngầm | ... | ... | ... |
-| 6 | Do người dùng | ... | ... | ... |
-| 7 | Ngầm | ... | ... | ... |
-| 8 | Ngữ cảnh | ... | ... | ... |
-| 9 | Giới hạn hệ thống | ... | ... | ... |
-| 10 | Hệ thống | ... | ... | ... |
-| 11 | Giới hạn hệ thống | ... | ... | ... |
-| 12 | Do người dùng | ... | ... | ... |
-| 13 | Ngữ cảnh | ... | ... | ... |
-| 14 | Do người dùng | ... | ... | ... |
-| 15 | Hệ thống | ... | ... | ... |
-| 16 | Ngữ cảnh | ... | ... | ... |
-| 17 | Do người dùng | ... | ... | ... |
-| 18 | Giới hạn hệ thống | ... | ... | ... |
-| 19 | Hệ thống | ... | ... | ... |
-| 20 | Ngữ cảnh | ... | ... | ... |
+| 1 | Hệ thống | Do người dùng | Không | Do người dùng |
+| 2 | Giới hạn hệ thống | Hệ thống | Không | Hệ thống |
+| 3 | Hệ thống | Ngữ cảnh | Không | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Ngầm | Hệ thống | Không | Hệ thống |
+| 8 | Ngữ cảnh | Hệ thống | Không | Hệ thống |
+| 9 | Giới hạn hệ thống | Do người dùng | Không | Do người dùng |
+| 10 | Hệ thống | Ngữ cảnh | Không | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Do người dùng | Ngầm | Không | Ngầm |
+| 13 | Ngữ cảnh | Giới hạn hệ thống | Không | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Do người dùng | Ngầm | Không | Ngầm |
+| 18 | Giới hạn hệ thống | Ngữ cảnh | Không | Ngữ cảnh |
+| 19 | Hệ thống | Giới hạn hệ thống | Không | Giới hạn hệ thống |
+| 20 | Ngữ cảnh | Hệ thống | Không | Hệ thống |
 
-**Tỉ lệ đồng thuận ban đầu:** chờ hai bộ nhãn độc lập. Khi đủ dữ liệu, lấy số ca có hai nhãn gốc giống nhau chia cho 20. Mốc 80% tương ứng 16 ca.
+**Tỉ lệ đồng thuận ban đầu:** 7 / 20 = 35%. Hai bộ nhãn gốc trùng ở ca 4, 5, 6, 11, 14, 15, 16. Mức này dưới mốc 80% (16 ca), nên nhóm viết lại định nghĩa năm loại lỗi bên dưới rồi mới chốt nhãn thống nhất cho 13 ca lệch.
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
+
+**Định nghĩa đã viết lại (vì đồng thuận dưới 80%).** Hỏi theo thứ tự, dừng ở câu đầu tiên trả lời "có":
+
+1. **Do người dùng:** lỗi bắt đầu từ thông tin khách nhập, chọn hoặc bấm sai, kể cả khi trợ lý lẽ ra nên hỏi lại. Việc trợ lý cần gợi ý tốt hơn ghi ở cột khắc phục, không đổi nhãn.
+2. **Giới hạn hệ thống:** trợ lý không thể làm được dù cố gắng: thiếu dữ liệu, yêu cầu ngoài phạm vi, hoặc dạng đầu vào không xử lý được. Trả lời kém trong tình huống này vẫn là Giới hạn.
+3. **Ngữ cảnh:** trợ lý làm đúng thiết kế và chính sách, nhưng giả định không khớp hoàn cảnh hoặc kỳ vọng của khách.
+4. **Hệ thống:** trợ lý làm trái thiết kế hoặc chính sách (tính sai, gọi sai tham số, trích dẫn sai, báo sai trạng thái, thiếu khóa chống trùng) và cái sai đã lộ ra.
+5. **Ngầm:** có sai về tiền hoặc chi phí kéo dài mà cả khách lẫn hệ thống không nhận ra, chỉ lộ khi kiểm tra mẫu.
+
+| Ca | Nhãn Hà | Nhãn Quang | Nhãn chốt | Quy tắc phân biệt |
+| --: | --- | --- | --- | --- |
+| 1 | Hệ thống | Do người dùng | Do người dùng | Gốc lỗi là khách nhập thiếu hai chữ số tài khoản; việc trợ lý không kiểm định dạng là chỗ khắc phục, không phải nguyên nhân. |
+| 2 | Giới hạn hệ thống | Hệ thống | Hệ thống | Trợ lý có đủ bảng giá hàng nặng nhưng gọi sai tham số, nên làm được mà làm sai; khách mở lại nên lỗi đã lộ. |
+| 3 | Hệ thống | Ngữ cảnh | Ngữ cảnh | Hoàn về ví trong 5 phút đúng thiết kế; chỉ kỳ vọng nhận tiền qua ngân hàng của khách không khớp. |
+| 7 | Ngầm | Hệ thống | Hệ thống | Báo "đã hoàn thành công" khi sổ cái trả lỗi 503 là làm trái thiết kế, và lỗi ghi sổ lộ ngay qua đối soát nên không phải Ngầm. |
+| 8 | Ngữ cảnh | Hệ thống | Hệ thống | Viện dẫn điều 7.2 không tồn tại là sai so với chính sách dù số tiền đúng; trích dẫn sai nhìn thấy được nên không phải Ngầm. |
+| 9 | Giới hạn hệ thống | Do người dùng | Do người dùng | Khách nhập mã đơn của sàn thay vì mã vận đơn; trợ lý không gợi ý là việc cần cải thiện ở cột khắc phục. |
+| 10 | Hệ thống | Ngữ cảnh | Ngữ cảnh | Từ chối theo điều khoản bất khả kháng là đúng chính sách; khách thấy sai vì kỳ vọng từ dòng "cam kết giao 24 giờ". |
+| 12 | Do người dùng | Ngầm | Ngầm | Kết quả vẫn đúng nhưng chi phí token gấp 3 lần suốt 3 tuần mà không ai thấy; "sai" ở đây là sai về chi phí, không liên quan thao tác của khách. |
+| 13 | Ngữ cảnh | Giới hạn hệ thống | Giới hạn hệ thống | Phí bảo hiểm là sản phẩm của đối tác, ngoài phạm vi trợ lý; trả lời chung chung là xử lý giới hạn kém, ghi ở cột khắc phục. |
+| 17 | Do người dùng | Ngầm | Ngầm | Dùng bảng giá cũ làm 212 đơn lệch trong 9 ngày, không khách nào mở lại; lỗi chỉ lộ khi đối chiếu với bảng giá hiện hành. |
+| 18 | Giới hạn hệ thống | Ngữ cảnh | Ngữ cảnh | Số tiền 15.000 đ đúng chính sách; khách hiểu sai vì thông báo thiếu cách tính, không phải vì trợ lý thiếu khả năng. |
+| 19 | Hệ thống | Giới hạn hệ thống | Giới hạn hệ thống | Trợ lý chỉ truy cập được dữ liệu 12 tháng và đã nói rõ rồi chuyển nhân viên, tức là gặp giới hạn và xử lý đúng. |
+| 20 | Ngữ cảnh | Hệ thống | Hệ thống | Hoàn hai lần vì lệnh thứ hai thiếu khóa chống trùng là lỗi thiết kế; khách gửi lại sau 10 phút là hành vi hợp lệ. |
 
 <details>
 <summary>Đối chiếu sau khi khóa hai bộ nhãn gốc · 20 ca trong đề</summary>
