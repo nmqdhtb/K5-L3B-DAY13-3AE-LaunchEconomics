@@ -2,7 +2,7 @@
 
 Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo bằng chứng trong hồ sơ, không theo cách trình bày: một đề xuất No-go có lý do bằng số được điểm cao hơn một đề xuất Go bỏ qua con số bất lợi.
 
-- Nhóm chấm (hội đồng): ...
+- Nhóm chấm (hội đồng): 3AE, lớp L3B
 - Nhóm được chấm: ...
 
 | Tiêu chí | 0 điểm | 5 điểm | 10 điểm | Điểm | Lý do (có số) |
@@ -16,6 +16,6 @@ Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo b
 
 **Lý do:** ...
 
-**Một câu hỏi cho đội trình:** ...
+**Câu hỏi dự kiến cho đội trình:** Nếu tuần đầu phải xem lại 100% gợi ý, chi phí mỗi việc thành công là bao nhiêu và ai quyết định giữ hay dừng bước mở rộng?
 
 **Câu trả lời của đội trình (ghi lại tại buổi):** ...

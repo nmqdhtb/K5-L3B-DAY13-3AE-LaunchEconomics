@@ -8,7 +8,7 @@
 | 2 · Độ nhạy | Chi phí tăng 51,8% nếu số ca làm lại gấp đôi, 40,7% nếu tiền xem lại gấp đôi và 23,1% nếu lương tăng 25% (simulated). | Giả lập | Trưởng nhóm tài chính |
 | 3 · So với tự làm | Tính cả 222 yêu cầu phải tiếp quản trên toàn mẫu, hệ thống tốn 5.865 đ/yêu cầu, bằng 0,49 lần mức nhân viên tự làm 12.000 đ, trước chi phí cố định (simulated). | Giả lập | Trưởng nhóm vận hành |
 | 4 · Kết quả, sử dụng, an toàn | Đợt chạy thử có 994/1.200 yêu cầu đóng đúng hạn và không mở lại (82,83%), 48/177 gợi ý đã xem bị sửa hoặc bỏ (27,12%) và 51/1.200 yêu cầu mở lại (4,25%). | Xong, có bằng chứng | Trưởng nhóm CSKH |
-| 5 · Lỗi và khắc phục | Đang chờ 2 bộ nhãn độc lập cho 20 ca, tỷ lệ đồng thuận và biện pháp cho 5 loại lỗi. | Chưa | Trưởng nhóm đảm bảo chất lượng |
+| 5 · Lỗi và khắc phục | Đã có biện pháp cho 5 loại lỗi. Còn chờ 2 bộ nhãn độc lập cho 20 ca và tỷ lệ đồng thuận. | Chưa | Trưởng nhóm đảm bảo chất lượng |
 | 6 · Pilot | Chia ngẫu nhiên 1:1 theo yêu cầu, tối thiểu 1.251 yêu cầu/nhánh để phát hiện chênh lệch 5 điểm phần trăm. Khóa gợi ý theo yêu cầu và kiểm log truy cập chéo vì nhân viên làm cả hai nhánh. | Xong, có bằng chứng | Giám đốc vận hành |
 | 7 · Rủi ro kinh tế | Khi xem lại mọi kết quả OK và làm lại mất 15,3 phút/ca, chi phí tăng lên 12.415 đ/việc (simulated). Đo phút thực tế từ tuần 1 và dừng mở rộng nếu vượt ngưỡng chi phí trong 2 tuần. | Giả lập | PM trợ lý hoàn phí |
 

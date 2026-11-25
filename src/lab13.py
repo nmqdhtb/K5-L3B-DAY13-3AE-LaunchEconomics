@@ -134,9 +134,24 @@ def bao_cao_co_mau():
     print('D1e · Yêu cầu/nhân viên, DE:', m, 1 + (m - 1) * icc)
 
 
+def bao_cao_chi_so(reqs):
+    reviewed = reqs[reqs.duoc_xem_lai.eq(1)]
+    reopened = reqs.mo_lai_trong_7_ngay.eq(1)
+    metrics = {
+        'Đóng trong 24h, không mở lại trong 7 ngày': reqs.dong_trong_24h.eq(1) & ~reopened,
+        'Sửa hoặc bỏ trong số đã xem': reviewed.quyet_dinh_xem_lai.isin(['sua', 'bo']),
+        'Mở lại trong 7 ngày': reopened,
+    }
+    print('E1 · Chỉ số trong đợt chạy thử')
+    for name, observed in metrics.items():
+        result = f'{observed.mean():.2%}' if len(observed) else 'chưa có mẫu'
+        print(f'{name}: {observed.sum()}/{len(observed)} ({result})')
+
+
 if __name__ == '__main__':
     kiem_tra_dap_an_biet_truoc()
     runs = pd.read_csv('logix_runs.csv')
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
     bao_cao_chi_phi(runs, reqs)
     bao_cao_co_mau()
+    bao_cao_chi_so(reqs)

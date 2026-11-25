@@ -13,6 +13,8 @@
 # 5. Điều kiện 20 cụm/nhánh áp dụng cho thiết kế theo cụm. Ở đây đơn vị ngẫu nhiên là yêu cầu.
 # Đánh đổi: đủ mẫu cho +5 điểm, nhưng hiệu ứng học hỏi có thể thu hẹp chênh lệch giữa hai nhánh.
 # Mở lại 7 ngày: 51/1.200 = 4,25% toàn mẫu và 39/982 = 3,97% trong phạm vi.
+# Mức 3,97% thấp hơn trần 6%. Chênh lệch so với đối chứng phải đo trong pilot.
+# Khi tuần đầu chưa đủ thời gian quan sát, giữ mức hiện tại cho đến khi có dữ liệu an toàn.
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN"
@@ -23,7 +25,7 @@ pilot:
     randomized: true
     method: "Chọn ngẫu nhiên yêu cầu đủ điều kiện vào pilot, sau đó phân bổ 1:1 theo depot và loại. Giữ nguyên nhánh cho mọi lần chạy lại."
   rollout: [0.10, 0.25, 0.50]
-  rollout_definition: "Tỷ lệ yêu cầu đủ điều kiện đưa vào pilot theo tuần. Một nửa số được chọn dùng trợ lý, một nửa tiếp tục do nhân viên tự xử lý. Giữ mức 50% sau tuần 3."
+  rollout_definition: "Tỷ lệ yêu cầu đủ điều kiện đưa vào pilot theo tuần. Một nửa số được chọn dùng trợ lý, một nửa tiếp tục do nhân viên tự xử lý. Mỗi bước kéo dài ít nhất một tuần. Chỉ tăng khi có dữ liệu an toàn đủ 7 ngày và đã rà các ngưỡng vận hành. Giữ mức 50% sau bước cuối."
   primary_metric:
     name: dong_trong_24h_khong_mo_lai_7_ngay
     baseline: 0.70
@@ -38,14 +40,22 @@ pilot:
     spillover_risk: "Nhân viên có thể áp dụng kinh nghiệm từ nhánh trợ lý. Ẩn gợi ý ở nhánh đối chứng, ghi request_id và staff_id để kiểm truy cập chéo."
     predeclared: "Phân tích theo nhánh được gán ban đầu, gồm cả ca chuyển người. Chốt chỉ số chính một lần khi đủ 7 ngày theo dõi cho cả hai nhánh."
   stop_rules:
-    - "NẾU tỷ lệ mở lại trong 7 ngày vượt 6% hoặc cao hơn đối chứng ít nhất 2 điểm phần trăm TRONG một tuần yêu cầu đã đủ 7 ngày theo dõi THÌ Giám đốc vận hành tắt trợ lý trong 30 phút KHÔNG THÌ giữ lịch theo dõi an toàn."
-    - "NẾU chi phí biến đổi vượt 8.000 đ/việc thành công (ngưỡng simulated) TRONG 2 tuần liên tiếp THÌ PM dừng mở rộng và rà thời gian xem lại, làm lại KHÔNG THÌ giữ phạm vi đã duyệt."
-    - "NẾU nhân viên sửa hoặc bỏ trên 40% gợi ý đã xem TRONG 1 tuần THÌ Trưởng nhóm CSKH giữ nguyên mức rollout và phỏng vấn 5 nhân viên trong 3 ngày KHÔNG THÌ cho phép chuyển bước nếu đạt ngưỡng an toàn và chi phí."
+    - "NẾU tỷ lệ mở lại trong 7 ngày vượt 6% hoặc cao hơn đối chứng ít nhất 2 điểm phần trăm TRONG một tuần yêu cầu đã đủ 7 ngày theo dõi THÌ Giám đốc vận hành tắt trợ lý trong 30 phút KHÔNG THÌ không tăng rollout cho đến khi có đủ dữ liệu an toàn và hoàn tất rà soát tuần."
+    - "NẾU chi phí biến đổi vượt 8.000 đ/việc thành công (ngưỡng simulated) TRONG 2 tuần liên tiếp THÌ PM dừng mở rộng và rà thời gian xem lại, làm lại KHÔNG THÌ không mở thêm loại yêu cầu hoặc depot ngoài phạm vi đã duyệt."
+    - "NẾU nhân viên sửa hoặc bỏ trên 40% gợi ý đã xem TRONG 1 tuần THÌ Trưởng nhóm CSKH giữ nguyên mức rollout và phỏng vấn 5 nhân viên trong 3 ngày KHÔNG THÌ không chuyển bước khi còn vi phạm ngưỡng an toàn hoặc chi phí."
   interim_looks: "Chỉ kiểm tra an toàn giữa kỳ. Đánh giá chi phí và sử dụng tại mốc vận hành hằng tuần. Chỉ số chính được phân tích một lần."
   rollback: "Giám đốc vận hành tắt cờ trợ lý trong 30 phút, chuyển cả yêu cầu đang chờ sang hàng đợi nhân viên và giữ log phục vụ đối soát."
   proposed_start: "2026-12-01"
   decision_date: "2027-01-05"
-  decision_rule: "Chỉ đề xuất mở rộng nếu đủ 1.251 yêu cầu mỗi nhánh đã theo dõi đủ 7 ngày, cải thiện ít nhất 5 điểm phần trăm, khoảng tin cậy 95% cho chênh lệch nằm trên 0 và đạt các ngưỡng vận hành. Thiếu mẫu hoặc vi phạm ngưỡng thì giữ phạm vi và trình lại kế hoạch."
+  decision_rule: >-
+    Ngày 05/01/2027, phân tích một lần trên toàn bộ yêu cầu đã phân bổ đến hết 27/12/2026.
+    Mốc này dành đủ 24 giờ để đóng yêu cầu và 7 ngày sau khi đóng để quan sát mở lại.
+    Nếu thiếu 1.251 yêu cầu đã đủ thời gian quan sát ở bất kỳ nhánh nào hoặc log kết quả chưa đủ,
+    hoãn quyết định, chưa kiểm định chỉ số chính và chốt lịch bổ sung mẫu.
+    Khi đủ mẫu, chỉ đề xuất mở rộng nếu tỷ lệ của nhánh trợ lý cao hơn đối chứng ít nhất 5 điểm phần trăm,
+    cận dưới khoảng tin cậy 95% cho chênh lệch lớn hơn 0 và các ngưỡng vận hành đều đạt.
+    Nếu đủ mẫu nhưng thiếu một trong các điều kiện này, dừng mở rộng và trình lại phương án.
+    Luật tắt trợ lý vì an toàn có hiệu lực ngay cả trước ngày quyết định.
   simulated_inputs:
     - "phut_xem_lai_simulated và phut_lam_lai_simulated, quy đổi 2.000 đ/phút"
     - "Chi phí A3 và ngưỡng chi phí 8.000 đ/việc dùng cho kế hoạch (simulated)"

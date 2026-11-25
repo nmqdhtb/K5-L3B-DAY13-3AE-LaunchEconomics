@@ -2,6 +2,8 @@
 
 20 ca lỗi nằm trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx`. Năm loại theo Google PAIR: **Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm**. Gắn nhãn theo nguyên nhân gốc, không theo chỗ cần sửa.
 
+Xem [bài mẫu CP3 với 20 tình huống tự tạo](../../docs/CP3_bai_mau.md) để tham khảo cách trình bày và tính đồng thuận.
+
 ## Hai bộ nhãn độc lập
 
 Người gắn nhãn 1: Trương Thu Hà · Người gắn nhãn 2: Nguyễn Ngọc Quang (gắn trong 8 phút, không trao đổi)
@@ -29,13 +31,26 @@ Người gắn nhãn 1: Trương Thu Hà · Người gắn nhãn 2: Nguyễn Ng�
 | 19 | ... | ... | ... | ... |
 | 20 | ... | ... | ... | ... |
 
-**Tỉ lệ đồng thuận:** ... / 20 = ...%
+**Tỉ lệ đồng thuận ban đầu:** chờ hai bộ nhãn độc lập. Khi đủ dữ liệu, lấy số ca có hai nhãn gốc giống nhau chia cho 20. Mốc 80% tương ứng 16 ca.
 
 ## Quy tắc phân biệt cho các ca không trùng
 
 Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
 
-- ...
+<details>
+<summary>Đối chiếu sau khi khóa hai bộ nhãn gốc · 20 ca trong đề</summary>
+
+| Loại lỗi tham khảo | Ca | Căn cứ phân loại |
+| --- | --- | --- |
+| Do người dùng | 1, 6, 9, 14 | Khách nhập thiếu số tài khoản, chọn nhầm mục khiếu nại, dùng nhầm loại mã hoặc xác nhận nhầm đã nhận tiền. |
+| Hệ thống | 2, 7, 8, 15, 20 | Trợ lý chọn sai tham số giá, báo hoàn thành khi ghi sổ thất bại, viện dẫn điều khoản không tồn tại, tính sai tỷ lệ hoặc ghi hoàn trùng. |
+| Ngữ cảnh | 3, 10, 16, 18 | Ví nhận tiền, lời hứa giao trong 24 giờ, giờ gửi thông báo hoặc cách giải thích số tiền khiến kết quả khác kỳ vọng của khách. |
+| Giới hạn hệ thống | 4, 11, 13, 19 | Trợ lý thiếu dữ liệu chặng đối tác, khả năng đọc âm thanh, quyền xử lý bảo hiểm hoặc lịch sử đơn quá 12 tháng. |
+| Ngầm | 5, 12, 17 | Hoàn thừa do mã giảm giá, chi phí gọi tool tăng kéo dài hoặc dùng bảng giá cũ. Sai lệch tồn tại qua nhiều đơn và chỉ lộ khi rà soát. |
+
+Nguồn phân loại là mục “Nhãn tham khảo cho 20 ca” trong [hướng dẫn của lab](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md). Khi xử lý ca bất đồng thực tế, giữ nguyên cả hai nhãn gốc, ghi nhãn chốt và dẫn một chi tiết quyết định từ tình huống.
+
+</details>
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
