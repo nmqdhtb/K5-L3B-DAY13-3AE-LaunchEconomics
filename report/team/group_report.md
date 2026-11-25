@@ -13,7 +13,7 @@ LogiX-VN cần quyết định loại yêu cầu hoàn phí nào đáng đưa v�
 | Nhiệm vụ | Cách thực hiện và bằng chứng |
 | --- | --- |
 | A–B | Tính chi phí theo loại yêu cầu, thử 9 kịch bản độ nhạy và so sánh giới hạn 1–3 lần chạy sau khi cộng tiền nhân viên tiếp quản. [Bảng chi phí](bang_chi_phi.md) |
-| C | Đề xuất phát hiện và khắc phục cho 5 loại lỗi. Hai bộ nhãn độc lập và tỷ lệ đồng thuận còn chờ ghi nhận. [Bảng lỗi](bang_loi.md) |
+| C | Hà và Quang trùng 7/20 ca khi gắn độc lập (35%). Nhóm đã viết lại định nghĩa, ghi quy tắc cho 13 ca lệch và lập bảng khắc phục đủ 5 loại. Nhãn chốt khớp đáp án 20/20 ca. [Bảng lỗi](bang_loi.md) |
 | D | Chia ngẫu nhiên theo yêu cầu trong cùng depot và loại hàng, tỷ lệ 1:1. Cần 1.251 yêu cầu mỗi nhánh, đủ thời gian theo dõi. [Kế hoạch pilot](pilot_plan.yaml) |
 | E | Đặc tả 5 chỉ số, 8 sự kiện và 2 rủi ro kinh tế. [Chỉ số và rủi ro](chi_so.md) |
 

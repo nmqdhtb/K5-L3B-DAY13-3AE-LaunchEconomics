@@ -26,6 +26,7 @@
 
 ## 5. Công cụ AI đã dùng
 
+- Codex: hỗ trợ đếm lại số ca trùng từ hai cột nhãn gốc, đối chiếu nhãn chốt với bảng tham khảo và cập nhật số liệu CP3 trong hồ sơ nhóm. Có thể kiểm lại bằng cách đếm các dòng “Có” rồi chia cho 20.
 - Claude: giải thích nội dung lab, hướng dẫn thao tác VS Code và Git, rà định dạng file markdown. Không dùng AI để gắn nhãn 20 ca.
 - Cách tự kiểm tra: đối chiếu định nghĩa 5 loại lỗi với slide buổi sáng; chạy các lệnh kiểm tra trong `CHECKPOINTS.md`; xem bản hiển thị (Cmd + K, V) trước khi commit.
 

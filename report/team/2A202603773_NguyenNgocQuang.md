@@ -42,4 +42,5 @@
 ## 6. Tự đánh giá
 
 - **Điểm làm tốt:** Chủ động theo sát cấu trúc hồ sơ Gate 2a, đảm bảo mọi số liệu nhất quán giữa các file, phân biệt rõ số đo thực và số `simulated`, và chỉ rõ các điều kiện chặn trước khi triển khai pilot.
-- **Điểm cần hoàn thiện tiếp:** Cập nhật Mục 5 trong `ho_so_launch_v0.md` từ `Chưa` sang `Xong, có bằng chứng` sau khi chốt kết quả đối chiếu 20 ca lỗi (CP3) cùng Người gắn nhãn 1 và hoàn thiện `phieu_cham.md` sau phiên duyệt chéo.
+- **Kết quả CP3.** Mục 5 của hồ sơ đã ghi nhận mức đồng thuận ban đầu 7/20 (35%). Sau khi nhóm viết lại định nghĩa và xử lý 13 ca bất đồng, nhãn chốt khớp đáp án 20/20. [Bảng lỗi](bang_loi.md)
+- **Điểm cần hoàn thiện tiếp.** Hoàn thiện `phieu_cham.md` sau phiên duyệt chéo.
