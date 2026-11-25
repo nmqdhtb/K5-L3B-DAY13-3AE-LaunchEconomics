@@ -1,8 +1,11 @@
-# Báo cáo cá nhân · Nguyễn Minh Quân
+# Báo cáo cá nhân — NguyenMinhQuan-2A202603794
 
 ## 1. Thông tin thành viên
 
-Nguyễn Minh Quân · 2A202603794 · 26ai.quannm10@vinuni.edu.vn · Nhóm trưởng 3AE, lớp L3B.
+- Họ tên: Nguyễn Minh Quân
+- MSSV: 2A202603794
+- Email: 26ai.quannm10@vinuni.edu.vn
+- Vai trong nhóm: Nhóm trưởng 3AE (lớp L3B), người viết code và người kiểm số.
 
 ## 2. Phần việc phụ trách
 
@@ -14,9 +17,9 @@ Commit `ea303ab` đưa mô hình A–B và kế hoạch pilot vào repo. B3 so s
 
 ## 4. Bằng chứng
 
-[Code](../../src/lab13.py) · [Bảng chi phí và phép kiểm tay](bang_chi_phi.md) · [Kế hoạch pilot](pilot_plan.yaml) · [Báo cáo nhóm](group_report.md)
+[Code](../../src/lab13.py) · [Bảng chi phí và phép kiểm tay](bang_chi_phi.md) · [Kế hoạch pilot](pilot_plan.yaml) · [Báo cáo nhóm](group_report.md) · [Phiếu 3AE chấm 5AE 30/30, kết luận Go có điều kiện](phieu_cham.md) (commit `c64bb1a`).
 
-## 5. Công cụ AI và cách kiểm tra
+## 5. Công cụ AI đã dùng
 
 Codex hỗ trợ viết và chạy code, kiểm tra YAML và tổng hợp hồ sơ. Phép đối chiếu A2 dùng trực tiếp tổng số lượt gọi tool trong CSV: 5.600 × 15 đ = 84.000 đ. Ba phép thử A1 trả về 1,20, 1,25 và 1,25.
 

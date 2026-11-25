@@ -23,6 +23,7 @@
 
 - Commit `138ef37` "CP3: bang loi - nguoi gan nhan, bang khac phuc co event" trên nhánh main.
 - File `report/team/bang_loi.md` (cột "Nhãn người 1", tỉ lệ đồng thuận, bảng khắc phục).
+- Ở CP5, nhóm 3AE đã chấm 5AE 30/30 và ghi lại phần hỏi đáp về tỷ lệ mở lại của các yêu cầu hàng nặng. [Phiếu duyệt chéo](phieu_cham.md)
 
 ## 5. Công cụ AI đã dùng
 

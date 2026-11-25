@@ -6,7 +6,7 @@
 
 Người gắn nhãn 1: Trương Thu Hà · Người gắn nhãn 2: Nguyễn Ngọc Quang (gắn trong 8 phút, không trao đổi)
 
-Hai cột nhãn gốc được lưu ở commit `55d9ecc` (Hà) và `f5e5d9b` (Quang). Nhóm ghi kết quả đối chiếu ở commit `30090cf`.
+Có thể kiểm tra riêng từng bộ nhãn theo số ca ở ba bản lưu. [Nhãn gốc của Hà](https://github.com/nmqdhtb/K5-L3B-DAY13-3AE-LaunchEconomics/blob/55d9ecc681df5c3a2132f7d20ddd760b1d83de3b/report/team/bang_loi.md) · [Nhãn gốc của Quang](https://github.com/nmqdhtb/K5-L3B-DAY13-3AE-LaunchEconomics/blob/f5e5d9bb46be15529f97a5b9ff2b2d5b93a39002/report/team/bang_loi.md) · [Bản đối chiếu của nhóm](https://github.com/nmqdhtb/K5-L3B-DAY13-3AE-LaunchEconomics/blob/30090cfab8da90fe6505a7dc20e32c47d0d65d56/report/team/bang_loi.md)
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
@@ -31,9 +31,9 @@ Hai cột nhãn gốc được lưu ở commit `55d9ecc` (Hà) và `f5e5d9b` (Qu
 | 19 | Hệ thống | Giới hạn hệ thống | Không | Giới hạn hệ thống |
 | 20 | Ngữ cảnh | Hệ thống | Không | Hệ thống |
 
-**Tỉ lệ đồng thuận ban đầu:** 7 / 20 = 35%. Hai bộ nhãn gốc trùng ở ca 4, 5, 6, 11, 14, 15, 16. Mức này dưới mốc 80% (16 ca), nên nhóm viết lại định nghĩa năm loại lỗi bên dưới rồi mới chốt nhãn thống nhất cho 13 ca lệch.
+**Đồng thuận độc lập.** Hà và Quang trùng nhãn ở các ca 4, 5, 6, 11, 14, 15 và 16. Tỉ lệ là **7/20 = 35%**, dưới ngưỡng 16/20 của tiêu chí C3. [Rubric C3](../../RUBRIC.md#rubric)
 
-**Đối chiếu đáp án:** So từng ô ở cột “Nhãn thống nhất” với nhãn tham khảo của lab cho cùng số ca, kết quả khớp 20/20. Tỉ lệ đồng thuận độc lập vẫn là 7/20.
+**Xử lý 13 ca bất đồng.** Theo điều kiện “Xong khi” của CP3, nhóm viết lại định nghĩa cho cả 5 loại lỗi và ghi căn cứ chốt từng ca ở bảng dưới. Đối chiếu cột “Nhãn thống nhất” theo số ca với đáp án của lab cho kết quả **20/20**. [Hướng dẫn nhiệm vụ C](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md#nhiệm-vụ-c--bảng-lỗi-và-cách-khắc-phục-30-phút)
 
 ## Quy tắc phân biệt cho các ca không trùng
 
@@ -54,7 +54,7 @@ Hai cột nhãn gốc được lưu ở commit `55d9ecc` (Hà) và `f5e5d9b` (Qu
 | 8 | Ngữ cảnh | Hệ thống | Hệ thống | Viện dẫn điều 7.2 không tồn tại là sai so với chính sách dù số tiền đúng; trích dẫn sai nhìn thấy được nên không phải Ngầm. |
 | 9 | Giới hạn hệ thống | Do người dùng | Do người dùng | Khách nhập mã đơn của sàn thay vì mã vận đơn; trợ lý không gợi ý là việc cần cải thiện ở cột khắc phục. |
 | 10 | Hệ thống | Ngữ cảnh | Ngữ cảnh | Từ chối theo điều khoản bất khả kháng là đúng chính sách; khách thấy sai vì kỳ vọng từ dòng "cam kết giao 24 giờ". |
-| 12 | Do người dùng | Ngầm | Ngầm | Kết quả vẫn đúng nhưng chi phí token gấp 3 lần suốt 3 tuần mà không ai thấy; "sai" ở đây là sai về chi phí, không liên quan thao tác của khách. |
+| 12 | Do người dùng | Ngầm | Ngầm | Tool của D05 trả thiếu một trường khiến trợ lý phải gọi lại. Kết quả vẫn đúng nên chi phí token gấp 3 lần các depot khác suốt 3 tuần mới được phát hiện. |
 | 13 | Ngữ cảnh | Giới hạn hệ thống | Giới hạn hệ thống | Phí bảo hiểm là sản phẩm của đối tác, ngoài phạm vi trợ lý; trả lời chung chung là xử lý giới hạn kém, ghi ở cột khắc phục. |
 | 17 | Do người dùng | Ngầm | Ngầm | Dùng bảng giá cũ làm 212 đơn lệch trong 9 ngày, không khách nào mở lại; lỗi chỉ lộ khi đối chiếu với bảng giá hiện hành. |
 | 18 | Giới hạn hệ thống | Ngữ cảnh | Ngữ cảnh | Số tiền 15.000 đ đúng chính sách; khách hiểu sai vì thông báo thiếu cách tính, không phải vì trợ lý thiếu khả năng. |
@@ -78,12 +78,12 @@ Nguồn phân loại là mục “Nhãn tham khảo cho 20 ca” trong [hướng
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
-Quân soạn bảng khắc phục, Hà rà soát và bổ sung tên sự kiện. Bảng dưới ghi các phép kiểm đề xuất cho pilot.
+Quân soạn bảng khắc phục, Hà rà soát và bổ sung tên sự kiện. Bảng dưới mô tả các phép kiểm đề xuất cho pilot. Dùng `request_id` và `trace_id` để tra lại hồ sơ của từng cảnh báo. Hai sự kiện `ticket_reopened` và `refund_audited` dùng chung với [bảng chỉ số E1](chi_so.md).
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | Mỗi lần khách gửi biểu mẫu, kiểm độ dài số tài khoản theo ngân hàng nhận. Ghi `input_validation_failed` và báo ngay cho khách từ lần đầu sai định dạng. | Chặn tạo lệnh hoàn, chỉ rõ số chữ số ngân hàng yêu cầu và cho khách sửa trước khi gửi lại. | Trưởng nhóm tích hợp thanh toán |
-| 20 | Hệ thống | Event `refund_ledger_write` sau mỗi lần ghi sổ: đếm giao dịch hoàn thành theo mã nghĩa vụ hoàn phí. Ngưỡng: báo ngay từ giao dịch thành công thứ 2 cho cùng nghĩa vụ. | Dùng một khóa chống trùng (idempotency key) cho mọi lần gửi lại cùng nghĩa vụ. Khi phát hiện hoàn hai lần, khóa yêu cầu và chuyển kế toán đối soát. | Trưởng nhóm kỹ thuật thanh toán |
-| 18 | Ngữ cảnh | Event `ticket_reopened` với lý do "hoàn thiếu", rà hằng tuần. Ngưỡng: ghi nhận từ 1 ca có số tiền đúng nhưng thông báo thiếu cách tính. | Hiển thị phí gốc, tỷ lệ và số tiền hoàn trong cùng thông báo. Với ca này, khách sẽ thấy 30.000 đ × 50% = 15.000 đ. | Trưởng nhóm CSKH |
-| 19 | Giới hạn hệ thống | Mỗi giờ, lọc nhật ký tra cứu lấy các yêu cầu trả kết quả “đơn quá 12 tháng”. Ghép với `handoff_to_staff` theo `request_id`. Báo khi có ít nhất 1 yêu cầu đã quá 1 giờ mà hàng đợi nhân viên chưa ghi nhận. | Trợ lý giải thích giới hạn tra cứu và chuyển mã đơn cùng tóm tắt cho nhân viên. Chỉ báo đã bàn giao khi hàng đợi trả mã tiếp nhận. | Trưởng nhóm vận hành |
-| 5 | Ngầm | Mỗi tuần, kế toán lấy mẫu đơn có mã giảm giá, tính lại tiền được hoàn từ hóa đơn sau giảm và chính sách áp dụng, rồi so với tiền thực chi trong sổ cái. Ghi `refund_audited` và mở điều tra từ 1 khoản hoàn thừa. | Tính hoàn từ giá khách thực trả. Rà lại 14 đơn phát hiện trong đề và kiểm tra các đơn dùng cùng quy tắc tính. | Kế toán trưởng |
+| 1 | Do người dùng | Mỗi lần gửi biểu mẫu, đối chiếu độ dài số tài khoản với quy tắc của ngân hàng nhận. Ngay lần sai đầu tiên, ghi `input_validation_failed` với ngân hàng và số chữ số đã nhập. | Chặn tạo lệnh hoàn, hiển thị số chữ số cần nhập và cho khách sửa tại chỗ. | Trưởng nhóm tích hợp thanh toán |
+| 20 | Hệ thống | Sau mỗi `refund_ledger_write` thành công, đếm mã giao dịch sổ cái khác nhau cho cùng mã nghĩa vụ hoàn phí. Cảnh báo ngay khi có giao dịch thứ 2. | Dùng cùng khóa chống trùng cho mọi lần gửi lại một nghĩa vụ. Nếu đã ghi hoàn hai lần, khóa yêu cầu và chuyển kế toán đối soát. | Trưởng nhóm kỹ thuật thanh toán |
+| 18 | Ngữ cảnh | Hằng tuần, rà các `ticket_reopened` vì “hoàn thiếu”. Với từng ca, tính lại tiền theo chính sách và đọc bản tin thực gửi. Ghi nhận từ 1 ca có số tiền đúng nhưng bản tin thiếu phép tính. | Hiển thị phí gốc, tỷ lệ và số tiền hoàn trong cùng thông báo. Ở ca 18, khách sẽ thấy 30.000 đ × 50% = 15.000 đ. | Trưởng nhóm CSKH |
+| 19 | Giới hạn hệ thống | Đếm yêu cầu có kết quả tra cứu “quá 12 tháng” mỗi giờ. Ghép với `handoff_to_staff` do hàng đợi ghi khi cấp mã tiếp nhận. Cảnh báo từ 1 yêu cầu đã quá 1 giờ kể từ lúc tra cứu mà vẫn thiếu mã tiếp nhận. | Giải thích giới hạn 12 tháng, chuyển mã đơn cùng tóm tắt cho nhân viên và xác nhận bàn giao khi có mã tiếp nhận. | Trưởng nhóm vận hành |
+| 5 | Ngầm | Hằng tuần, kế toán lấy mẫu đơn có mã giảm giá và tính lại số tiền đúng từ hóa đơn sau giảm theo chính sách áp dụng. Khi kiểm các đơn này, ghi thêm số tính lại (`expected_vnd`) vào `refund_audited`. Điều tra từ 1 ca có số thực chi trong sổ cái (`paid_vnd`) lớn hơn `expected_vnd`. | Tính hoàn từ giá khách thực trả. Đối soát 14 đơn trong đề và rà các giao dịch đã dùng cùng quy tắc tính. | Kế toán trưởng |

@@ -43,4 +43,4 @@
 
 - **Điểm làm tốt:** Chủ động theo sát cấu trúc hồ sơ Gate 2a, đảm bảo mọi số liệu nhất quán giữa các file, phân biệt rõ số đo thực và số `simulated`, và chỉ rõ các điều kiện chặn trước khi triển khai pilot.
 - **Kết quả CP3.** Mục 5 của hồ sơ đã ghi nhận mức đồng thuận ban đầu 7/20 (35%). Sau khi nhóm viết lại định nghĩa và xử lý 13 ca bất đồng, nhãn chốt khớp đáp án 20/20. [Bảng lỗi](bang_loi.md)
-- **Điểm cần hoàn thiện tiếp.** Hoàn thiện `phieu_cham.md` sau phiên duyệt chéo.
+- **Duyệt chéo.** Nhóm 3AE đã chấm 5AE 30/30, kết luận **Go có điều kiện** và ghi lại câu hỏi cùng câu trả lời của 5AE. [Phiếu chấm](phieu_cham.md)
