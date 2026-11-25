@@ -23,7 +23,9 @@ LogiX-VN cần quyết định loại yêu cầu hoàn phí nào đáng đưa v�
 
 Trong đợt chạy thử, 994/1.200 yêu cầu đạt chỉ số chính (82,83%), 48/177 gợi ý đã xem bị sửa hoặc bỏ (27,12%) và 51/1.200 yêu cầu mở lại (4,25%). Điều kiện mở pilot và người có quyền dừng được ghi trong [hồ sơ Gate 2a](ho_so_launch_v0.md).
 
-**Kết quả hội đồng chấm nhóm 3AE:** chờ phiếu hoặc biên bản từ nhóm chấm. Phiếu do 3AE lập khi chấm nhóm bạn được lưu ở [phiếu hội đồng](phieu_cham.md).
+**3AE chấm 5AE.** Cả ba tiêu chí đạt 10/10, tổng **30/30**. Hội đồng chọn **Go có điều kiện**. Phiếu ghi lý do, câu hỏi về tỷ lệ mở lại của `hang_nang` và câu trả lời của 5AE. [Phiếu chấm 5AE](phieu_cham.md)
+
+**Kết quả hội đồng chấm 3AE.** Nhóm đang chờ phiếu hoặc biên bản từ hội đồng.
 
 ## 5. Khó khăn và cách xử lý
 
