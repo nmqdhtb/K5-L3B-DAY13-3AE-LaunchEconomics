@@ -35,4 +35,4 @@ Khi hoàn thành, ghi phần việc thực tế và bằng chứng (file, kết 
 | --- | --- | --- |
 | Nguyễn Minh Quân | `2A202603794_NguyenMinhQuan.md` | |
 | Nguyễn Ngọc Quang | `2A202603773_NguyenNgocQuang.md` | Hoàn thiện `report/team/chi_so.md` (3 chỉ số E1 khớp CSV, 8 sự kiện có `trace_id`, 2 rủi ro kinh tế E2) và `report/team/ho_so_launch_v0.md` (đủ 7 mục, đề xuất Go có điều kiện); kiểm tra quy tắc nộp bài và gộp PR #1 (`7073d86`). |
-| Trương Thu Hà | `2A202603780_TruongThuHa.md` | |
+| Trương Thu Hà | `2A202603780_TruongThuHa.md` | Gắn nhãn độc lập 20 ca, so nhãn với Quang, tổng hợp bang_loi.md; rà bảng khắc phục, bổ sung event; canh Xong khi CP1–CP5. Bằng chứng: commit 138ef37, report/team/bang_loi.md |
